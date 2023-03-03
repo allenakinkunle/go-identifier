@@ -4,4 +4,4 @@
 
 ## Installation
 ```
-go get github.com/allenakinkunle/go-identifier
+go get github.com/allenakinkunle/go-identifier/v2

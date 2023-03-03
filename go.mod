@@ -1,6 +1,6 @@
-module github.com/allenakinkunle/go-identifier
+module github.com/allenakinkunle/go-identifier/v2
 
-go 1.17
+go 1.19
 
 require (
 	github.com/gofrs/uuid v4.3.1+incompatible

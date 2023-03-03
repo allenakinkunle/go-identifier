@@ -12,20 +12,18 @@ type IIdentifier interface {
 
 type Identifier struct {
 	characters string
-	length     uint
 	namespace  string
 }
 
-func NewIdentifier(characters string, length uint, namespace string) (*Identifier, error) {
+func NewIdentifier(characters string, namespace string) *Identifier {
 	return &Identifier{
 		characters: characters,
-		length:     length,
 		namespace:  namespace,
-	}, nil
+	}
 }
 
 func (i Identifier) NewNanoID() string {
-	id, _ := gonanoid.Generate(i.characters, int(i.length))
+	id, _ := gonanoid.Generate(i.characters, 21)
 	return id
 }
 
